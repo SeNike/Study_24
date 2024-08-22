@@ -6,8 +6,10 @@
 
 ## Задача 2
 
-[![task2.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task3.1.png)
+
+## Задача 3
+![task3-1.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task3.1.png)
 
 
 
-[![task3-1.png](https://i.postimg.cc/kGrsj3HV/task3-1.png)](https://postimg.cc/LYTjX72R)
+![task3-2.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task3.2.png)
