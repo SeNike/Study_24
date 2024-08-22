@@ -7,3 +7,7 @@
 ## Задача 2
 
 [![task2.png](https://i.postimg.cc/J0htyV45/task2.png)](https://postimg.cc/YGJtVPFv)
+
+
+
+[![task3-1.png](https://i.postimg.cc/kGrsj3HV/task3-1.png)](https://postimg.cc/LYTjX72R)
