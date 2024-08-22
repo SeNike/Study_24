@@ -6,4 +6,4 @@
 
 ## Задача 2
 
-![image](https://drive.google.com/file/d/1HEsq76AHeXmnDdI5tNmDcHDhRJrLFssh/view?usp=sharing)
+[![task2.png](https://i.postimg.cc/J0htyV45/task2.png)](https://postimg.cc/YGJtVPFv)
