@@ -14,3 +14,7 @@
 Проблема заключается в том, что после изменения настроек Nginx принимает соединения на 81 порту, а проброшен из контейнера 80.
 
 ![task3-2.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task3.2.png)
+
+## Задача 4
+
+![task4](https://github.com/SeNike/Study_24/blob/main/02.Docker/task4.png)
