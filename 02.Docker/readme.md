@@ -9,6 +9,7 @@
 ![task2](https://github.com/SeNike/Study_24/blob/main/02.Docker/task2.png)
 
 ## Задача 3
+![task3-0.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task3.0.png)
 Когда вы нажимаете Ctrl-C в терминале, где вы подключены к контейнеру, это посылает сигнал прерывания (SIGINT) основному процессу. Если этот процесс завершится, контейнер также завершит свою работу, потому что в Docker основное правило — контейнер работает, пока работает его основной процесс. Как только основной процесс завершается, контейнер переходит в статус "Exited".
 ![task3-1.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task3.1.png)
 
