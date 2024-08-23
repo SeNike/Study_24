@@ -20,3 +20,15 @@
 ## Задача 4
 
 ![task4](https://github.com/SeNike/Study_24/blob/main/02.Docker/task4.png)
+
+## Задача 5
+
+![task5-1.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task5.1.png)
+Был запущен файл compose.yaml, т.к. таков синтаксис комманд compose
+![task5-2.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task5.2.png)
+
+![task5-3.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task5.3.png)
+![task5-4.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task5.4.png)
+![task5-5.png](https://github.com/SeNike/Study_24/blob/main/02.Docker/task5.5.png)
+Объяснение предупреждения:
+Предупреждение сообщает о том, что были найдены "осиротевшие" контейнеры, связанные с проектом. Это контейнеры, которые были созданы предыдущей версией манифеста, но теперь они не соответствуют текущему состоянию или больше не описаны в манифесте 
