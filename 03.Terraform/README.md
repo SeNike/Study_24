@@ -23,43 +23,33 @@
 6. Раскомментируйте блок кода, примерно расположенный на строчках 29–42 файла **main.tf**.
 Выполните команду ```terraform validate```. Объясните, в чём заключаются намеренно допущенные ошибки. Исправьте их.
 
- Error: Missing name for resource
-│
-│   on main.tf line 24, in resource "docker_image":
-│   24: resource "docker_image" {
-│
-│ All resource blocks must have 2 labels (type, name). - Каждый блок раздела ресурсов должениметь 2 лейбла (тип, имя)
-╵
-╷
-│ Error: Invalid resource name
-│
-│   on main.tf line 29, in resource "docker_container" "1nginx":
-│   29: resource "docker_container" "1nginx" {
-│
-│ A name must start with a letter or underscore and may contain only letters, digits, underscores, and dashes. - Имя должно начинаться с буквы или нижнего подчеркивания
-╵
-│ Error: Reference to undeclared resource
-│
-│   on main.tf line 31, in resource "docker_container" "nginx":
-│   31:   name  = "example_${random_password.random_string_FAKE.resulT}"
-│
-│ A managed resource "random_password" "random_string_FAKE" has not been declared in the root module. - ресурс "random_string_FAKE" не декларирован в корневом модуле
-╷
-│ Error: Unsupported attribute
-│
-│   on main.tf line 31, in resource "docker_container" "nginx":
-│   31:   name  = "example_${random_password.random_string.resulT}"
-│
-│ This object has no argument, nested block, or exported attribute named "resulT". Did you mean "result"? - Этот объект не имеет аргументов, вложенных блоков или аттрибутов с именем "resulT"  
+ - Каждый блок раздела ресурсов должениметь 2 лейбла (тип, имя)
+ - Имя ресурса должно начинаться с буквы или нижнего подчеркивания
+ - Ресурс "random_string_FAKE" не декларирован в корневом модуле
+ - Объект не имеет аргументов, вложенных блоков или аттрибутов с именем "resulT"  
 
 8. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
 
+   resource "docker_image" "nginx" {
+   
+  name         = "nginx:latest"
+  
+  keep_locally = true
+  
+}
+
+resource "docker_container" "nginx" {
+
+  image = docker_image.nginx.image_id
+  
+  name  = "example_${random_password.random_string.result}"
 
 
-9. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
+
+10. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
 Объясните своими словами, в чём может быть опасность применения ключа  ```-auto-approve```. Догадайтесь или нагуглите зачем может пригодиться данный ключ? В качестве ответа дополнительно приложите вывод команды ```docker ps```.
-10. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
-11. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
+11. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
+12. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
 
 
 ------
