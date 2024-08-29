@@ -4,7 +4,7 @@
 
 Скачайте и установите **Terraform** версии ~>1.8.4 . Приложите скриншот вывода команды ```terraform --version```.
 
-![img](https://github.com/SeNike/Study_24/blob/main/03.Terraform/Screenshot%202024-08-29%20144952.png)
+![img](https://github.com/SeNike/Study_24/blob/main/03.Terraform/1.png)
    
 
 
@@ -30,19 +30,9 @@
 
 8. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
 
-   resource "docker_image" "nginx" {
-   
-  name         = "nginx:latest"
-  
-  keep_locally = true
-  
-}
+![img](https://github.com/SeNike/Study_24/blob/main/03.Terraform/2.png)
 
-resource "docker_container" "nginx" {
-
-  image = docker_image.nginx.image_id
-  
-  name  = "example_${random_password.random_string.result}"
+![img](https://github.com/SeNike/Study_24/blob/main/03.Terraform/3.png)
 
 
 
